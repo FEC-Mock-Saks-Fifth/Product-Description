@@ -25,7 +25,7 @@ class App extends React.Component {
   }
 
   getProduct() {
-    axios.get('/product')
+    axios.get('/derick_product_details')
     .then(res => this.setState({
       current: res.data,
       bullet: res.data.details.bullet.split('!'),

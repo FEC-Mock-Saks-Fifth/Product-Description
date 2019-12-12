@@ -54,7 +54,6 @@ class Details extends React.Component {
                 <dt className="DPgothamPro DPproduct_name">Size - <span className="DPhelvetica DPproduct_name" style={{color:"#777", "marginLeft":"4px"}}>{this.state.size}</span><a className="DPsize_guide" target="_blank" href="https://www.saksfifthavenue.com/html/popups/m_sizechart.jsp?PRODUCT%3C%3Eprd_id=845524447374804#125">Size Guide</a></dt>
               </dl>
 
-              {/* Fit Predictor Component */}
               <FitPredictor />
 
               <div className="DPcolor_size">
