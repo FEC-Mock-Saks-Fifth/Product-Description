@@ -1,48 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import ProductDropdown from './ProductDropdown.jsx';
 import FitPredictor from './FitPredictor.jsx';
-
-const MiniCart = styled.div`
-font-family: Gotham Narrow,Sans-Serif;
-fontSize: inherit;
-min-width: 1024px !important;
-background: white;
-`;
-
-const MiniCartContent = styled.div`
-display: block;
-width: 320px;
-height: 800px;
-position: absolute;
-right: 0px;
-top: 0px;
-z-index: 2;
-transition: all 0.5s;
-transition-timing-function: linear
-overflow: hidden;
-opacity: ${props => (props.addtobag ? "1" : "0")}
-max-width: ${props => (props.addtobag ? "100%" : "0")}
-padding: ${props => (props.addtobag ? "15px" : "0 15px")}
-`
-
-const MiniCartContentHeader = styled.div`
-align-items: center;
-background-color: #f6f6f6;
-display: -ms-flexbox;
-display: flex;
-font-size: 14px;
-height: 3rem;
-justify-content: center;
-lineHeight: 18px;
-text-align: center;
-`
-
-const MiniCartContentSubtotal = styled.div`
-padding: 1.5rem;
-width: 100%;
-`;
-
 
 class Details extends React.Component {
   constructor(props) {
@@ -57,13 +15,29 @@ class Details extends React.Component {
     }
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (prevState.addtobag === true && nextProps.addtobag !== prevState.addtobag) {
+      return {addtobag: nextProps.addtobag};
+    }
+  }
+  
+
   render() {
     if (this.props.current.length === 0) {
       return null;
     } else {
       return (
 
-        <section className="DPDcontainer">
+        <section style={{
+          boxSizing: "border-box",
+          width: "44%",
+          float: "right",
+          paddingLeft: "10px",
+          paddingRight: "220px",
+          maxWidth: "1050px",
+          background: "white",
+          opacity: `${this.state.addtobag ? "0.2" : "1"}`
+        }}>
           <div>
             <div className="DPgothamPro DPbrand" >{this.props.current.brand}</div>
             <div className="DPhelvetica DPproduct_name">{this.props.current.product_name}</div>
@@ -93,7 +67,7 @@ class Details extends React.Component {
               </div>
                 {this.state.sizetoggle !== null ? (
                   <div style={{"marginTop": "18px", "marginBottom": "6px"}}>
-                    <p className="DPgothamPro" style={{"fontSize": "0.75rem", "font-weight": "bold"}}>Pre-Order</p>
+                    <p className="DPgothamPro" style={{"fontSize": "0.75rem", "fontWeight": "bold"}}>Pre-Order</p>
                     <p className="DPgothamPro" style={{"fontSize": "0.5rem", "marginTop": "-10px"}}>Expected ship date no later than: {`${new Date().getUTCMonth()+4}/${new Date().getUTCDate()}/${new Date().getUTCFullYear()}`}</p>
                   </div>) : null }<br></br>
 
@@ -109,13 +83,13 @@ class Details extends React.Component {
               <button className="DPbutton" onClick={() => this.setState({quantity: Number(this.state.quantity) + 1})}>+</button>
             </div><br></br>
   
-            <div style={{"marginTop": "35px"}}>
+            <div style={{"marginTop": "35px"}} onClick={() => this.props.addToBagToggle(this.state.size, this.state.quantity)}>
               <button className="DPadd_button" onClick={() => this.setState({addtobag: true})}>ADD TO BAG</button>
+            </div>
               <div style={{"marginTop": "15px", "marginBottom": "30px"}}>
                 <button className="DPgift_button"><img className="default" src="https://static.loopassets.net/store/saksfifthavenue/images/ribbon-static.svg" style={{height: "0.9rem", border: "1px solid #000"}}/> 
                 <span className="DPgothamNarrow DPgift_name">GIFTNOW®</span><span className="DPgothamNarrow DPgift_name1">Gifting Made Easy.</span></button>
               </div>
-            </div>
   
             <img src="/icons/Screen Shot 2019-12-08 at 5.22.33 PM.png" style={{float: "left", height: "1.25rem", width: "1.25rem"}}/>
             <div className="DPgothamNarrow DPshoprunner">
@@ -125,13 +99,6 @@ class Details extends React.Component {
 
          <ProductDropdown bullet={this.props.current.details.bullet.split('!')} style={this.props.current.details.style} head={this.props.current.details.head} sizefit={this.props.current.details.size}/>
          
-          {/* <MiniCart >
-            <MiniCartContent addtobag={this.state.addtobag} >
-              <MiniCartContentHeader> Shopping Bag </MiniCartContentHeader>
-              <MiniCartContentSubtotal>Estimated Total ${this.props.current.price}.00</MiniCartContentSubtotal>
-            </MiniCartContent>
-          </MiniCart> */}
-        {/* //  <Checkout addtobag={this.state.addtobag} size={this.state.size} quantity={this.state.quantity} brand={this.props.current.brand} product_name={this.props.current.product_name} price={this.props.current.price} picture={this.props.current.images[0]}/> : null} */}
         </section>
     )
   }}

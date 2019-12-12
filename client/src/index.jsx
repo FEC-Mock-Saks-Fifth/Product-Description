@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios'
 import Details from './components/Details.jsx'
 import Images from './components/Images.jsx'
+import AddtoBag from './components/AddtoBag.jsx'
 import './style.css'
 
 class App extends React.Component {
@@ -13,9 +14,14 @@ class App extends React.Component {
       bullet: [],
       style: '',
       images: [],
-      sizefit: ''
+      sizefit: '',
+      addtobag: false,
+      sizeselected: '',
+      quantityselected: ''
+
     }
     this.getProduct = this.getProduct.bind(this)
+    this.addToBagToggle=this.addToBagToggle.bind(this)
   }
 
   getProduct() {
@@ -30,15 +36,25 @@ class App extends React.Component {
     .catch(err => console.log(`ERROR collecting product ${err}`))
   }
 
+  addToBagToggle(size, quantity) {
+    this.setState(
+      {
+        addtobag: !this.state.addtobag,
+        sizeselected: size,
+        quantityselected: quantity
+      })
+  }
+
   componentDidMount() {
     this.getProduct()
   }
 
   render() {
     return(
-      <div>
-        <Details bullet={this.state.bullet} current={this.state.current} style={this.state.style} sizefit={this.state.sizefit}/>
-        <Images images={this.state.images}/>
+      <div >
+        <Details addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} bullet={this.state.bullet} current={this.state.current} style={this.state.style} sizefit={this.state.sizefit}/>
+        <Images images={this.state.images} addtobag={this.state.addtobag}/>
+        <AddtoBag addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} images={this.state.images[1]} current={this.state.current} size={this.state.sizeselected} quantity={this.state.quantityselected}/>
       </div>
     )
   }

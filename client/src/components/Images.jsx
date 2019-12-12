@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import '../style.css'
 
 class Images extends React.Component {
@@ -27,6 +26,7 @@ class Images extends React.Component {
 
   render() {
     return (
+      <div style={{background: "white",opacity: `${this.props.addtobag ? "0.2" : "1"}`}}>
       <section style={{boxSizing: "border-box", width: "55.3333333333%", float: "left", paddingLeft: "10px", paddingRight: "10px", paddingTop: "10px", position: "relative", display: "block"}}>
         <div className="DPmedia_player_container">
           {this.state.icons[0].toggle === false ? (
@@ -51,8 +51,7 @@ class Images extends React.Component {
                 }}}
                 />
             )))}
-        </div>
-
+          </div>
         </div>
 
 
@@ -108,6 +107,7 @@ class Images extends React.Component {
         )}
         </div>
       </section>
+      </div>
     )
   }
 }

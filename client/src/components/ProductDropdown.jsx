@@ -10,6 +10,7 @@ class ProductDropdown extends React.Component {
       toggle1: false
     }
   }
+  
   render() {
     return (
       <section className="DPprod_drop_info">

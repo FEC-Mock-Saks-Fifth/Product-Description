@@ -24,12 +24,12 @@ class FitPredictor extends React.Component {
                   <div className="DPsize_is_container">
                     <img className="DPsize_is_image" onClick={() => this.setState({itemrunstrue: false})} src="/icons/iconmonstr-x-mark-thin.svg"/>
                     <span className="DPsize_is_span">Based on your past purchases, </span><br></br>
-                    <span className="DPsize_is_span">in this item we think you are size</span>
+                    <span className="DPsize_is_span">in this item we think you are size</span><br></br><br></br><br></br>
                     <div className="DPsize_is_middle_bold">{this.state.sizeselected}</div>
                     <div className="DPsize_is_bottom">
-                      <button className="DPsize_is_container_button">NEXT</button>
                       <img className="DPsize_is_question" src="icons/help-round-button.svg" />
-                      <div className="DPsize_is_middle">2/2</div>
+                      <div>2/2</div>
+                      <button className="DPsize_is_container_button">NEXT</button>
                     </div>
                   </div>
                 ) : (
