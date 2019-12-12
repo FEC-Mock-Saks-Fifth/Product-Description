@@ -1,16 +1,13 @@
 const Product = require('./seed.js');
 
-// var getProduct = callback => {
-//   Product.findOne({price: 1290})
-//     .exec(callback)
-// }
-// var getProduct = callback => {
-//   Product.findOne({price: 198})
-//     .exec(callback)
-// }
 var getProduct = callback => {
-  Product.findOne({price: 265})
-    .exec(callback)
+  Product.findRandom({}, {}, {limit: 1}, (err, result) => {
+    if (err) {
+      callback(err)
+    } else {
+      callback(null, result)
+    }
+  })
 }
 
 module.exports = getProduct;

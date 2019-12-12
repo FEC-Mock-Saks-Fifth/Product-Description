@@ -16,7 +16,6 @@ class ProductDropdown extends React.Component {
       <section className="DPprod_drop_info">
         <div className="DPprod_drop_panel">
 
-
           <a style={{
             display: "block",
             padding: "17px 0",
@@ -31,7 +30,6 @@ class ProductDropdown extends React.Component {
             Details
             {this.state.open ? <span className="DPprod_drop_icon">-</span> : <span className="DPprod_drop_icon">+</span>}
           </a>
-
 
           <div style={{
             overflow: "hidden",
@@ -49,7 +47,13 @@ class ProductDropdown extends React.Component {
             <li key={index}>{bullet}</li>
             )}
             <a className="DPprod_drop_sizefit">SIZE & FIT</a>
-            <li>{this.props.sizefit}</li>
+            {this.props.sizefit.includes('!') ? (
+              this.props.sizefit.split('!').map((bullet, index) => (
+                <li>{bullet}</li>
+              )
+            )) : (
+              <li>{this.props.sizefit}</li>
+            )}
             <div className="DPprod_drop_style">Style Code: {this.props.style}</div>
           </div>
 

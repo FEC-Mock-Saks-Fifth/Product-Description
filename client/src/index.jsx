@@ -32,7 +32,7 @@ class App extends React.Component {
       style: res.data.details.style,
       images: res.data.images,
       sizefit: res.data.details.size
-    }, () => console.log(res.data)))
+    }, () => console.log(res.data, this.state.images)))
     .catch(err => console.log(`ERROR collecting product ${err}`))
   }
 

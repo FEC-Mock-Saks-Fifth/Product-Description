@@ -91,7 +91,7 @@ class Details extends React.Component {
                 <span className="DPgothamNarrow DPgift_name">GIFTNOW®</span><span className="DPgothamNarrow DPgift_name1">Gifting Made Easy.</span></button>
               </div>
   
-            <img src="/icons/Screen Shot 2019-12-08 at 5.22.33 PM.png" style={{float: "left", height: "1.25rem", width: "1.25rem"}}/>
+            <img src="https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+5.22.33+PM.png" style={{float: "left", height: "1.25rem", width: "1.25rem"}}/>
             <div className="DPgothamNarrow DPshoprunner">
               <strong>SHOPRUNNER FREE 2-Day Shipping & Free Returns</strong><br></br><span style={{cursor: "pointer", "textDecoration": "underline"}}>Learn More</span><span> | </span><span style={{cursor: "pointer", "textDecoration": "underline"}}>Sign In</span>
             </div>

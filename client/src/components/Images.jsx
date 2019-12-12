@@ -12,7 +12,7 @@ class Images extends React.Component {
       demagnify: true,
       repeat: true,
       fullscreen: false,
-      icons: [{name: 'magnify', toggle: false, icon: "icons/Document-in-out-look-magnifier-zoom-glass_1-512.png"}, {name: 'demagnify', toggle: true, icon: "icons/Document-in-out-look-magnifier-zoom-glass-512.png"}, {name: 'reset', toggle: true, icon: "icons/Arrow_replay_back_rewind_undo-512.png"}, {name: 'fullscreen', toggle: false, icon:"icons/full_screen-512.png"}],
+      icons: [{name: 'magnify', toggle: false, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass_1-512.png"}, {name: 'demagnify', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass-512.png"}, {name: 'reset', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Arrow_replay_back_rewind_undo-512.png"}, {name: 'fullscreen', toggle: false, icon:"https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/full_screen-512.png"}],
       currentindex: 0,
       lastindex: 5
     }
@@ -42,11 +42,11 @@ class Images extends React.Component {
               <img className="DPside_control_icon" key={index} src={icon.icon} onClick={() => {
                 if (icon.name === 'magnify') {
                   this.setState({icons: [
-                    {name: 'magnify', toggle: true, icon: "icons/Document-in-out-look-magnifier-zoom-glass_1-512.png"}, {name: 'demagnify', toggle: false, icon: "icons/Document-in-out-look-magnifier-zoom-glass-512.png"}, {name: 'reset', toggle: false, icon: "icons/Arrow_replay_back_rewind_undo-512.png"}, {name: 'fullscreen', toggle: false, icon:"icons/full_screen-512.png"}
+                    {name: 'magnify', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass_1-512.png"}, {name: 'demagnify', toggle: false, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass-512.png"}, {name: 'reset', toggle: false, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Arrow_replay_back_rewind_undo-512.png"}, {name: 'fullscreen', toggle: false, icon:"https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/full_screen-512.png"}
                   ]})
                 } else if (icon.name === 'demagnify' || icon.name === 'reset') {
                   this.setState({icons: [
-                    {name: 'magnify', toggle: false, icon: "icons/Document-in-out-look-magnifier-zoom-glass_1-512.png"}, {name: 'demagnify', toggle: true, icon: "icons/Document-in-out-look-magnifier-zoom-glass-512.png"}, {name: 'reset', toggle: true, icon: "icons/Arrow_replay_back_rewind_undo-512.png"}, {name: 'fullscreen', toggle: false, icon:"icons/full_screen-512.png"}
+                    {name: 'magnify', toggle: false, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass_1-512.png"}, {name: 'demagnify', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass-512.png"}, {name: 'reset', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Arrow_replay_back_rewind_undo-512.png"}, {name: 'fullscreen', toggle: false, icon:"https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/full_screen-512.png"}
                   ]})
                 }}}
                 />
@@ -67,7 +67,7 @@ class Images extends React.Component {
           </div>
         ) : (this.state.currentindex === 0) ? (
           <div>
-          <img className="DPup_arrow" style={{opacity: 0.5}} src='/icons/Screen Shot 2019-12-08 at 10.23.36 PM.png'/>
+          <img className="DPup_arrow" style={{opacity: 0.5}} src='https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+10.23.36+PM.png'/>
           <div className="DPside_media">
             {this.props.images.slice(this.state.currentindex, this.state.lastindex).map((image, index) => (
               (this.state.side === index) ? (
@@ -76,11 +76,11 @@ class Images extends React.Component {
                 <div className="DPside_single_container" key={index} onClick={() => this.setState({image: image, toggle: true, side: index})}><img className="DPside_single_thumb" src={image}/></div>
               )))}
           </div>
-          <img className="DPdown_arrow" src='/icons/Screen Shot 2019-12-08 at 10.23.10 PM.png' onClick={() => this.setState({currentindex: this.state.currentindex + 1, lastindex: this.state.lastindex + 1, side: this.state.side - 1})}/>
+          <img className="DPdown_arrow" src='https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+10.23.10+PM.png' onClick={() => this.setState({currentindex: this.state.currentindex + 1, lastindex: this.state.lastindex + 1, side: this.state.side - 1})}/>
           </div>
         ) : (this.props.images[this.state.lastindex] === undefined) ? (
           <div>
-          <img className="DPup_arrow" src='/icons/Screen Shot 2019-12-08 at 10.23.36 PM.png' onClick={() => this.setState({currentindex: this.state.currentindex - 1, lastindex: this.state.lastindex - 1, side: this.state.side + 1})}/>
+          <img className="DPup_arrow" src='https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+10.23.36+PM.png' onClick={() => this.setState({currentindex: this.state.currentindex - 1, lastindex: this.state.lastindex - 1, side: this.state.side + 1})}/>
           <div className="DPside_media">
             {this.props.images.slice(this.state.currentindex, this.state.lastindex).map((image, index) => (
               (this.state.side === index) ? (
@@ -89,11 +89,11 @@ class Images extends React.Component {
                 <div className="DPside_single_container" key={index} onClick={() => this.setState({image: image, toggle: true, side: index})}><img className="DPside_single_thumb" src={image}/></div>
               )))}
           </div>
-          <img className="DPdown_arrow" style={{opacity: 0.5}} src='/icons/Screen Shot 2019-12-08 at 10.23.10 PM.png'/>
+          <img className="DPdown_arrow" style={{opacity: 0.5}} src='https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+10.23.10+PM.png'/>
           </div>
         ) : (
           <div>
-          <img className="DPup_arrow" src='/icons/Screen Shot 2019-12-08 at 10.23.36 PM.png' onClick={() => this.setState({currentindex: this.state.currentindex - 1, lastindex: this.state.lastindex - 1, side: this.state.side + 1})}/>
+          <img className="DPup_arrow" src='https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+10.23.36+PM.png' onClick={() => this.setState({currentindex: this.state.currentindex - 1, lastindex: this.state.lastindex - 1, side: this.state.side + 1})}/>
           <div className="DPside_media">
             {this.props.images.slice(this.state.currentindex, this.state.lastindex).map((image, index) => (
               (this.state.side === index) ? (
@@ -102,7 +102,7 @@ class Images extends React.Component {
                 <div className="DPside_single_container" key={index} onClick={() => this.setState({image: image, toggle: true, side: index})}><img className="DPside_single_thumb" src={image}/></div>
               )))}
           </div>
-          <img className="DPdown_arrow" src='/icons/Screen Shot 2019-12-08 at 10.23.10 PM.png' onClick={() => this.setState({currentindex: this.state.currentindex + 1, lastindex: this.state.lastindex + 1, side: this.state.side - 1})}/>
+          <img className="DPdown_arrow" src='https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+10.23.10+PM.png' onClick={() => this.setState({currentindex: this.state.currentindex + 1, lastindex: this.state.lastindex + 1, side: this.state.side - 1})}/>
           </div>
         )}
         </div>

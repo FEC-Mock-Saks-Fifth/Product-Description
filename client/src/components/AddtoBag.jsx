@@ -21,7 +21,7 @@ const AddtoBag = (props) => (
       marginLeft: "200px"
     }}>
       <div className="DPcartheader_middle">
-      <img className="DPsize_is_addimage" onClick={() => props.addToBagToggle()} src="/icons/Screen Shot 2019-12-12 at 11.12.40 AM.png"/><span>Shopping Bag</span></div>
+      <img className="DPsize_is_addimage" onClick={() => props.addToBagToggle()} src="https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-12+at+11.12.40+AM.png"/><span>Shopping Bag</span></div>
       
       <div className="DPcart_subtotal">Estimated Total <span style={{float: "right"}}>${props.current.price}.00</span></div>
       <button className="DPadd_button">Checkout</button>
