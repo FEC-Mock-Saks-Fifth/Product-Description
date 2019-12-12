@@ -4,7 +4,8 @@
   "description": "",
   "main": "product-description.js",
   "scripts": {
-    "build": "webpack -d --watch"
+    "build": "webpack -d --watch",
+    "start": "nodemon server/index.js"
   },
   "author": "",
   "license": "ISC",
