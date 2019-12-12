@@ -1,0 +1,536 @@
+.DPDcontainer {
+  box-sizing: border-box;
+  width: 44%;
+  float: right;
+  padding-left: 10px;
+  padding-right: 220px;
+  max-width: 1050px;
+}
+
+.DPgothamPro {
+  font-family: "Gotham Pro",Helvetica,Arial,Sans-Serif;
+}
+.DPgothamNarrow {
+  font-family: "Gotham Narrow",Helvetica,Arial,Sans-Serif;
+}
+.DPhelvetica {
+  font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+}
+
+.DPbrand {
+  font-weight: 400;
+  line-height: 45px;
+  font-size: 24px;
+}
+.DPproduct_name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.DPproduct_section {
+  border-color: #ccc;
+  margin-top: 27px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  padding-top: 10px;
+}
+
+.DPcolor_size {
+  margin-bottom: 18px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  display: block;
+  box-sizing: inherit;
+}
+
+.DPsize_guide {
+  line-height:18px;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 18px;
+  float: right;
+}
+
+.DPsize_value {
+  font-size: 0.75rem;
+  display: inline-block;
+  min-width: 50px;
+  padding: 0 9px;
+  margin: 0 .50rem 1.5rem 0!important;
+  line-height: 2rem;
+  border: 1px solid #bfbfbf;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.DPsaks_earn {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  box-sizing: inherit;
+}
+
+.DPquantity_container {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: block;
+  box-sizing: inherit;
+}
+
+.DPbutton {
+  cursor: pointer;
+  width: 36px;
+  float: left;
+  border: 1px solid #bfbfbf;
+  outline: none;
+  text-align: center;
+  height: 2rem;
+  font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+}
+
+.DPquantity_input {
+  width: 36px;
+  float: left;
+  padding: 0;
+  border: 1px solid #bfbfbf;
+  outline: none;
+  text-align: center;
+  height: 1.9rem;
+}
+
+.DPadd_button {
+  display: block;
+  width: 100%;
+  border-color: #000;
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  border-width: 2px;
+  border-style: solid;
+  background-clip: padding;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  padding: 7px 12px;
+  min-height: 36px;
+}
+
+.DPgift_button {
+  color: #000;
+  font-size: 14px;
+  background: #fff;
+  border: none;
+  overflow: visible;
+  position: relative;
+  height: 18px;
+  cursor: pointer;
+}
+
+.DPgift_name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  position: absolute;
+  top: 0;
+  border-bottom: 1px solid #888;
+  display: relative;
+  margin-left: 5px;
+}
+
+.DPgift_name1 {
+  position: relative;
+  left: 70px;
+  line-height: 7px;
+  display: inline;
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+.DPshoprunner {
+  color: #000;
+  font-size: 12px;
+  line-height: 20px;
+  color: inherit;
+  padding: 0 5px 0 0;
+  margin: 0;
+  float: left;
+  font-weight: bold;
+};
+
+.DPMcontainer {
+  box-sizing: border-box;
+  width: 55.3333333333%;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  position: relative;
+  display: block;
+}
+
+.DPmedia_player_container {
+  float: right;
+  display: block;
+  position: relative;
+  width: 65%;
+  height: 65%;
+  min-height: 600px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  color: #000;
+}
+
+.DPmedia_main {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.DPmedia_zoom {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  max-width: none !important;
+  max-height: none !important;
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  transform: scale(2);
+}
+
+.DPside_media_container {
+  width: 100px;
+  height: 656px;
+  position: absolute;
+  top: 7px;
+  left: 185px;
+  border: 1px;
+  background: transparent;
+}
+
+.DPside_control_container {
+  position: relative;
+  margin-top: 18px;
+  margin-left: 10px;
+  float: left;
+}
+
+.DPside_control_icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.DPside_media {
+  width: 76px;
+  height: 585px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+
+.DPside_single_select {
+  margin: 0px;
+  position: relative;
+  left: 0px;
+  top: 9px;
+  margin-top: 15px;
+  display: block;
+  border: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+.DPside_single_thumb {
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 70px;
+  height: 90px;
+  margin-left: 2px;
+  margin-right: 2px;
+  height: auto;
+}
+
+.DPside_single_container {
+  margin: 0px;
+  position: relative;
+  left: 0px;
+  top: 9px;
+  margin-top: 15px;
+  display: block;
+}
+
+.DPup_arrow {
+  position: absolute;
+  left: 27.5px;
+  top: -7px!important;
+  width: 25px;
+  height: 18px;
+  display: block;
+  font-family: hbc-icons;
+  font-size: inherit;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: inherit;
+  text-decoration: none;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.DPdown_arrow {
+  position: absolute;
+  left: 27.5px;
+  top: 570px;
+  width: 25px;
+  height: 18px;
+  padding-top: 8px;
+  display: block;
+  font-family: hbc-icons;
+  font-size: inherit;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: inherit;
+  text-decoration: none;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.DPitem_run_true {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 0 6px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: inherit;
+  letter-spacing: -.3px;
+  margin-top: 14px;
+  font-family: "Gotham Narrow Bold",Helvetica,Arial,sans-serif!important;
+}
+
+.DPitem_run_logo {
+  width: 16px;
+  height: 16px;
+  background-position: -25px 0;
+  display: inline-block;
+  vertical-align: text-bottom;
+  background-size: 70px 25px;
+  border:0.5px solid black;
+  border-radius: 10px;
+}
+
+.DPitem_run_font {
+  font-size: 14px;
+  color: inherit;
+  margin: 0 2px;
+  padding: 0;
+  line-height: 30px;
+  text-transform: none;
+}
+
+.DPitem_run_calculate {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0 0 6px;
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: -.3px;
+  text-decoration: underline;
+}
+
+.DPsize_is_container {
+  border: 1px solid transparent;
+  border-top-color: #bfbfbf;
+  border-bottom-color: #bfbfbf;
+  padding: 16px 0 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Gotham Pro Medium","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+  min-height: 175px;
+  background: #fff;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.DPsize_is_image {
+  height: 1rem;
+  width: 1rem;
+  float: right;
+  cursor: pointer;
+}
+
+.DPsize_is_question {
+  height: 1.2rem;
+  width: 1.2rem;
+  float: left;
+  padding-top: 6px;
+  cursor: pointer;
+  bottom: 0;
+}
+
+.DPsize_is_option {
+  border: 1px solid #dfdfdf;
+  border-radius: 0;
+  height: 30px;
+  cursor: default;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  padding-right: 28px;
+  transition: border 200ms ease;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+.DPsize_is_select {
+  padding-right: 28px;
+  transition: border 200ms ease;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  font-family: sans-serif;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.DPsize_is_span {
+  width: 50%;
+  padding: 10px;
+  margin: auto;
+}
+
+.DPsize_is_middle_bold {
+  font-family: "Gotham Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+  font-size: 50px;
+  width: 50%;
+  margin-top: 20px;
+  margin: auto;
+  font-weight: 400;
+  height: 60px;
+}
+
+.DPsize_is_middle {
+  width: 50%;
+  margin: auto;
+  bottom: 0;
+}
+
+.DPsize_is_container_button {
+  border: 2px solid black;
+  font-family: "Gotham Pro","Helvetica Neue",Helvetica,Arial,Sans-Serif;
+  font-size: 14px;
+  float: right;
+  padding-top: 10px;
+  cursor: pointer;
+  bottom: 0;
+}
+
+.DPsize_is_bottom {
+  bottom: 0;
+  position: relative;
+}
+
+.DPprod_drop_info {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  font-family: "Gotham Pro",Sans-Serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+  display: block;
+}
+
+.DPprod_drop_panel {
+  margin-bottom: 18px;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.DPprod_drop_header {
+  display: block;
+  padding: 17px 0;
+  position: relative;
+  font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.DPprod_drop_icon {
+  position: absolute;
+  right: 0;
+}
+
+.DPprod_drop_sizefit {
+  display: block;
+  padding: 17px 0;
+  position: relative;
+  font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.DPprod_drop_style {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.DPprod_drop_code {
+  text-decoration: underline;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+
+.DPprod_drop_detailshow {
+  overflow: hidden;
+  height: auto;
+  transition: all 0.5s;
+  transition-timing-function: linear;
+  border-bottom: 1px solid #ccc;
+}
