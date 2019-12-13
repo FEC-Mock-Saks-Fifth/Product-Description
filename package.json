@@ -1,11 +1,12 @@
 {
   "name": "fec-saksfifth",
   "version": "1.0.0",
-  "description": "",
-  "main": "product-description.js",
+  "description": "FEC Product Description",
+  "main": "index.js",
   "scripts": {
     "build": "webpack -d --watch",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "seed": "node db/seed.js"
   },
   "author": "",
   "license": "ISC",
