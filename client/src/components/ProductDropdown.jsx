@@ -34,8 +34,8 @@ class ProductDropdown extends React.Component {
           <div style={{
             overflow: "hidden",
             height: "auto",
-            transition: "all 0.5s",
-            transitionTimingFunction: "linear",
+            transition: "0.5s",
+            transitionTimingFunction: "ease",
             opacity: `${this.state.open ? "1" : "0"}`,
             maxHeight: `${this.state.open ? "100%" : "0"}`,
             padding: `${this.state.open ? "15px" : "0 15px"}`,
@@ -49,7 +49,7 @@ class ProductDropdown extends React.Component {
             <a className="DPprod_drop_sizefit">SIZE & FIT</a>
             {this.props.sizefit.includes('!') ? (
               this.props.sizefit.split('!').map((bullet, index) => (
-                <li>{bullet}</li>
+                <li key={index}>{bullet}</li>
               )
             )) : (
               <li>{this.props.sizefit}</li>
@@ -76,7 +76,7 @@ class ProductDropdown extends React.Component {
           <div style={{
             overflow: "hidden",
             height: "auto",
-            transition: "all 0.5s",
+            transition: "0.5s",
             transitionTimingFunction: "linear",
             opacity: `${this.state.open1 ? "1" : "0"}`,
             maxHeight: `${this.state.open1 ? "100%" : "0"}`,

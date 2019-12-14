@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios'
 import Details from './components/Details.jsx'
-import Images from './components/Images.jsx'
+import Images from './components/Images1.jsx'
 import AddtoBag from './components/AddtoBag.jsx'
 import './style.css'
 
@@ -51,7 +51,7 @@ class App extends React.Component {
 
   render() {
     return(
-      <div >
+      <div>
         <Details addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} bullet={this.state.bullet} current={this.state.current} style={this.state.style} sizefit={this.state.sizefit}/>
         <Images images={this.state.images} addtobag={this.state.addtobag}/>
         <AddtoBag addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} images={this.state.images[1]} current={this.state.current} size={this.state.sizeselected} quantity={this.state.quantityselected}/>
@@ -61,3 +61,4 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('productdetail'))
+

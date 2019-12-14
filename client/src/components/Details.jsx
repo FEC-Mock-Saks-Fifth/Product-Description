@@ -36,7 +36,8 @@ class Details extends React.Component {
           paddingRight: "220px",
           maxWidth: "1050px",
           background: "white",
-          opacity: `${this.state.addtobag ? "0.2" : "1"}`
+          opacity: `${this.state.addtobag ? "0.2" : "1"}`,
+          pointerEvents: `${this.props.addtobag ? "none": "auto"}`
         }}>
           <div>
             <div className="DPgothamPro DPbrand" >{this.props.current.brand}</div>
@@ -83,7 +84,7 @@ class Details extends React.Component {
             </div><br></br>
   
             <div style={{"marginTop": "35px"}} onClick={() => this.props.addToBagToggle(this.state.size, this.state.quantity)}>
-              <button className="DPadd_button" onClick={() => this.setState({addtobag: true})}>ADD TO BAG</button>
+              <button className="DPadd_button" onClick={() => this.setState({addtobag: !this.state.addtobag})}>ADD TO BAG</button>
             </div>
               <div style={{"marginTop": "15px", "marginBottom": "30px"}}>
                 <button className="DPgift_button"><img className="default" src="https://static.loopassets.net/store/saksfifthavenue/images/ribbon-static.svg" style={{height: "0.9rem", border: "1px solid #000"}}/> 

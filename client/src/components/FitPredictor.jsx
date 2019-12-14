@@ -11,7 +11,7 @@ class FitPredictor extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div style={{zIndex: "-1"}}>
         {this.state.itemrunstrue ? (
               <div className="DPitem_run_true">
                 <div onClick={() => this.setState({itemrunstrue: false})}>
@@ -34,8 +34,8 @@ class FitPredictor extends React.Component {
                   </div>
                 ) : (
                   <div className="DPsize_is_container">
+                    <span className="DPsize_is_span">My size is:</span>
                     <img className="DPsize_is_image" onClick={() => this.setState({itemrunstrue: false})} src="https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/iconmonstr-x-mark-thin.svg"/>
-                    <div>My size is:</div>
                     <select className="DPsize_is_select" onChange={() => this.setState({select: this.state.select + 1})}><option className="DPsize_is_option">Select a similar designer that fits you</option><option className="DPsize_is_option">Alexander McQueen</option><option className="DPsize_is_option">Burberry</option><option className="DPsize_is_option">Comme des Garcons</option><option className="DPsize_is_option">Diesel</option><option className="DPsize_is_option">Dsquared2</option><option className="DPsize_is_option">Emporio Armani</option><option className="DPsize_is_option">Fendi</option><option className="DPsize_is_option">Givenchy</option><option className="DPsize_is_option">Kenzo</option><option className="DPsize_is_option">Marcelo Burlon County of Milan</option></select>
                     <select className="DPsize_is_select" onChange={() => this.setState({select: this.state.select + 1})}><option className="DPsize_is_option">Select a category</option><option className="DPsize_is_option">Hoodies</option><option>Pollos</option><option className="DPsize_is_option">T-Shirts</option><option className="DPsize_is_option">Sweaters</option><option className="DPsize_is_option">Outerwear</option><option className="DPsize_is_option">Shirts</option><option className="DPsize_is_option">Vests</option></select>
                     <select className="DPsize_is_select" onChange={(e) => this.setState({select: this.state.select + 1, sizeselected: e.target.value})}><option className="DPsize_is_option">Select your size</option><option className="DPsize_is_option">XS</option><option className="DPsize_is_option">S</option><option className="DPsize_is_option">M</option><option className="DPsize_is_option">L</option><option className="DPsize_is_option">XL</option><option className="DPsize_is_option">XXL</option><option className="DPsize_is_option">XXXL</option></select>

@@ -14,7 +14,8 @@ app.get('/derick_product_details', (req, res) => {
       res.status(404).send('ERROR')
     } else {
       console.log('RESULT', result)
-      res.status(200).send(result[0])
+      // res.status(200).send(result[0])
+      res.status(200).send(result)
     }
   })
 })
