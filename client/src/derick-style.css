@@ -65,7 +65,7 @@
   display: inline-block;
   min-width: 50px;
   padding: 0 9px;
-  margin: 0 .50rem 1.5rem 0!important;
+  margin: 0 .50rem 1.5rem 0;
   line-height: 2rem;
   border: 1px solid #bfbfbf;
   text-align: center;
@@ -235,7 +235,7 @@
 
 .DPproduct_shoprunner_image {
   float: left; 
-  height: 1.25rem; 
+  height: 5rem; 
   width: 1.25rem;
 }
 

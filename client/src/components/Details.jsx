@@ -80,7 +80,7 @@ class Details extends React.Component {
               <button className="DPproduct_gift_button"><img className="DPproduct_gift_image" src="https://static.loopassets.net/store/saksfifthavenue/images/ribbon-static.svg"/> 
               <span className="DPgothamNarrow DPgift_name">GIFTNOW®</span><span className="DPgothamNarrow DPgift_name1">Gifting Made Easy.</span></button>
             </div>  
-            <img className="DPproduct_shoprunner_image" src="https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+5.22.33+PM.png"/>
+            <img style={{float: "left", height: "1.25rem", width: "1.25rem"}} src="https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Screen+Shot+2019-12-08+at+5.22.33+PM.png"/>
             <div className="DPgothamNarrow DPshoprunner">
               <strong>SHOPRUNNER FREE 2-Day Shipping & Free Returns</strong><br></br><span className="DPproduct_shoprunner_learn">Learn More</span><span> | </span><span className="DPproduct_shoprunner_learn">Sign In</span>
             </div>
