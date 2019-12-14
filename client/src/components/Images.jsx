@@ -1,5 +1,4 @@
 import React from 'react';
-import '../style.css'
 import { relative } from 'path';
 
 class Images extends React.Component {
@@ -82,7 +81,7 @@ class Images extends React.Component {
           </div>
           <div className="DPside_media_container">
             {this.props.images.length <= 5 ? null : (
-              <img className="DParrow" src='./Miscellaneous/icons8-collapse-arrow-30.png' onClick={this.changeUpView} style={{ opacity: `${this.state.translateValue === 0 ? "0.5" : "1" }`,  cursor: `${this.state.translateValue === 0 ? "default" : "pointer"}`}}/>)}
+              <img className="DParrow" src='https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/icons8-collapse-arrow-30.png' onClick={this.changeUpView} style={{ opacity: `${this.state.translateValue === 0 ? "0.5" : "1" }`,  cursor: `${this.state.translateValue === 0 ? "default" : "pointer"}`}}/>)}
               <div className="DPside_media" >
                 {this.props.images.map((image, index) => (
                   <div className="DPside_single_container" key={index} onClick={() => this.updateMedia(image, index)} style={{ borderStyle: "solid", borderWidth: `${this.state.side === index ? '1px' : '0px'}`, borderColor: `${this.state.side === index ? 'black' : 'white'}`, transform: `translateY(${this.state.translateValue}px)`, transition: 'transform ease-out 0.55s'}}>
@@ -90,7 +89,7 @@ class Images extends React.Component {
                   </div>))}
               </div>
             {this.props.images.length <= 5 ? null : (
-              <img className="DParrow" src='./Miscellaneous/icons8-expand-arrow-30.png' onClick={this.changeDownView} style={{ opacity: `${this.state.translateValue === (-117 * (this.props.images.length - 5)) ? "0.5" : "1" }`, cursor: `${this.state.translateValue === (-117 * (this.props.images.length - 5)) ? 'default' : 'pointer'}`}}/>)}
+              <img className="DParrow" src='https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/icons8-expand-arrow-30.png' onClick={this.changeDownView} style={{ opacity: `${this.state.translateValue === (-117 * (this.props.images.length - 5)) ? "0.5" : "1" }`, cursor: `${this.state.translateValue === (-117 * (this.props.images.length - 5)) ? 'default' : 'pointer'}`}}/>)}
           </div>
         </section>
       </div>

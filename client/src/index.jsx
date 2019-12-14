@@ -4,7 +4,7 @@ import axios from 'axios'
 import Details from './components/Details.jsx'
 import Images from './components/Images.jsx'
 import AddtoBag from './components/AddtoBag.jsx'
-import './style.css'
+import './derick-style.css'
 
 class App extends React.Component {
   constructor() {
