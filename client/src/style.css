@@ -1,5 +1,4 @@
-
-
+/* General */
 .DPgothamPro {
   font-family: "Gotham Pro",Helvetica,Arial,Sans-Serif;
 }
@@ -10,6 +9,19 @@
   font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
 }
 
+.DPmodalwhite {
+  background: "white";
+}
+
+.DPfloatleft {
+  float: left;
+}
+
+.DPfloatright {
+  float: right;
+}
+
+/* Detail */
 .DPbrand {
   font-weight: 400;
   line-height: 45px;
@@ -20,7 +32,6 @@
   font-size: 14px;
   line-height: 18px;
 }
-
 .DPproduct_section {
   border-color: #ccc;
   margin-top: 27px;
@@ -30,11 +41,14 @@
 }
 
 .DPcolor_size {
-  margin-bottom: 18px;
   margin-block-start: 1em;
   margin-block-end: 1em;
   display: block;
-  box-sizing: inherit;
+}
+
+.DPproduct_color {
+  color: #777;
+  margin-left: 4px;
 }
 
 .DPsize_guide {
@@ -61,11 +75,42 @@
   text-transform: uppercase;
 }
 
+.DPproduct_border {
+  border: 1.5px solid black;
+}
+
+.DPproduct_shipping_margin {
+  margin-top: 18px;
+}
+
+.DPproduct_preorder_font {
+  font-size: 0.75rem; 
+  font-weight: bold;
+}
+
+.DPproduct_shipping_font {
+  font-size: 0.5rem; 
+  margin-top: -10px;
+}
+
+.DPproduct_price_font {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.DPproduct_earn_container {
+  padding-bottom: 0.75rem;
+}
+
 .DPsaks_earn {
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   box-sizing: inherit;
+}
+
+.DPproduct_earn_color {
+  color: #bd935d;
 }
 
 .DPquantity_container {
@@ -75,15 +120,10 @@
   box-sizing: inherit;
 }
 
-.DPbutton {
-  cursor: pointer;
-  width: 36px;
-  float: left;
-  border: 1px solid #bfbfbf;
-  outline: none;
-  text-align: center;
-  height: 2rem;
-  font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+.DPproduct_button {
+  background-color: #f6f6f6;
+  border-color: #ccc;
+  color: #aaa;
 }
 
 .DPquantity_input {
@@ -94,6 +134,10 @@
   outline: none;
   text-align: center;
   height: 1.9rem;
+}
+
+.DPproduct_addbutton_container {
+  margin-top: 35px;
 }
 
 .DPadd_button {
@@ -122,7 +166,24 @@
   min-height: 36px;
 }
 
-.DPgift_button {
+
+.DPbutton {
+  cursor: pointer;
+  width: 36px;
+  float: left;
+  border: 1px solid #bfbfbf;
+  outline: none;
+  text-align: center;
+  height: 2rem;
+  font-family: "Helvetica Neue",Helvetica,Arial,Sans-Serif;
+}
+
+.DPproduct_giftbutton_container {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+.DPproduct_gift_button {
   color: #000;
   font-size: 14px;
   background: #fff;
@@ -131,6 +192,14 @@
   position: relative;
   height: 18px;
   cursor: pointer;
+  height: 0.9rem;
+  width: 150px;
+}
+
+.DPproduct_gift_image {
+  height: 0.9rem;
+  border: 1px solid #000;
+  float: left;
 }
 
 .DPgift_name {
@@ -164,16 +233,18 @@
   font-weight: bold;
 };
 
-.DPMcontainer {
-  box-sizing: border-box;
-  width: 55.3333333333%;
-  float: left;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  position: relative;
-  display: block;
+.DPproduct_shoprunner_image {
+  float: left; 
+  height: 1.25rem; 
+  width: 1.25rem;
 }
+
+.DPproduct_shoprunner_learn {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Images */
 
 .DPmedia_player_container {
   float: right;
@@ -194,17 +265,17 @@
   height: 100%;
 }
 
-#DPfullscreen:fullscreen {
-  width: 100vw;
-  height: 100vh;
-}
-
 .DPmedia_zoom {
   position: relative;
   left: 0px;
   top: 0px;
   width: 100%;
   height: 100%;
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+  max-width: none !important;
+  max-height: none !important;
   -moz-transform: scale(2);
   -webkit-transform: scale(2);
   transform: scale(2);
@@ -272,7 +343,6 @@
   height: auto;
 }
 
-
 .DParrow {
   width: 20px;
   height: 22px;
@@ -280,10 +350,15 @@
   margin: 3px;
 }
 
+.DPimages_fadeout {
+  position: "relative";
+  transition: "1s";
+}
+
+/* Fit Predictor */
 .DPitem_run_true {
   box-sizing: border-box;
   position: relative;
-  padding: 0 0 6px;
   color: #000;
   font-size: 14px;
   font-weight: 800;
@@ -348,13 +423,6 @@
   width: 1rem;
   cursor: pointer;
   float: right;
-}
-.DPsize_is_addimage {
-  height: 1.5rem;
-  width: 1.5rem;
-  cursor: pointer;
-  display: absolute;
-  align-content: flex-start;
 }
 
 .DPsize_is_question {
@@ -425,6 +493,7 @@
   justify-content: space-between;
 }
 
+/* Product Dropdown */
 .DPprod_drop_info {
   box-sizing: border-box;
   width: 100%;
@@ -435,6 +504,7 @@
   line-height: 18px;
   display: block;
 }
+
 
 .DPprod_drop_panel {
   margin-bottom: 18px;
@@ -489,27 +559,12 @@
   border-bottom: 1px solid #ccc;
 }
 
+/* AddToBag */
 
 .DPmini_cart {
   font-family: Gotham Narrow,Sans-Serif;
   min-width: 1024px !important;
   background: white;
-}
-
-.DPcartItem_container {
-  width: 100%;
-  margin-top: 40px;
-
-}
-
-.DPcartItem_image {
-  width: 35%;
-  height: 35%;
-  float: left;
-}
-
-.DPcartItem_spacing {
-  margin-top: 6px;
 }
 
 .DPcartheader_middle {
@@ -521,8 +576,32 @@
   height: 3rem;
 }
 
+.DPsize_is_addimage {
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+  display: absolute;
+  align-content: flex-start;
+}
+
 .DPcart_subtotal {
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.DPcartItem_image {
+  width: 35%;
+  height: 35%;
+  float: left;
+}
+
+.DPcartItem_spacing {
+  margin-top: 6px;
+}
+
+.DPcartItem_container {
+  width: 100%;
+  margin-top: 40px;
+}
+
+

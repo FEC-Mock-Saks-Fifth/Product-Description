@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios'
 import Details from './components/Details.jsx'
-import Images from './components/Images1.jsx'
+import Images from './components/Images.jsx'
 import AddtoBag from './components/AddtoBag.jsx'
 import './style.css'
 
