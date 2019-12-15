@@ -13,11 +13,13 @@ class Images extends React.Component {
       icons: [{name: 'magnify', toggle: false, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass_1-512.png"}, {name: 'demagnify', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass-512.png"}, {name: 'reset', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Arrow_replay_back_rewind_undo-512.png"}],
       translateValue: 0,
       transition: false,
-      fade: true
+      fade: true,
+      isFull: false
     }
-    this.changeUpView=this.changeUpView.bind(this)
-    this.changeDownView=this.changeDownView.bind(this)
-    this.updateMedia=this.updateMedia.bind(this)
+    this.changeUpView=this.changeUpView.bind(this);
+    this.changeDownView=this.changeDownView.bind(this);
+    this.updateMedia=this.updateMedia.bind(this);
+
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
@@ -54,6 +56,7 @@ class Images extends React.Component {
       }
     }
   }
+
   
   render() {
     return (
@@ -76,7 +79,7 @@ class Images extends React.Component {
                     this.setState({icons: [{name: 'magnify', toggle: false, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass_1-512.png"}, {name: 'demagnify', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Document-in-out-look-magnifier-zoom-glass-512.png"}, {name: 'reset', toggle: true, icon: "https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/Arrow_replay_back_rewind_undo-512.png"}]})
                   }}} style={{opacity: `${icon.toggle ? "0.5" : "1"}`}}/>
                 ))}
-                  <img className="DPside_control_icon" src={"https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/full_screen-512.png"}/>,
+                  <img className="DPside_control_icon" onClick={() => this.props.goFull(this.state.current)} src={"https://fecsaksfifthproduct.s3-us-west-1.amazonaws.com/full_screen-512.png"}/>
             </div>
           </div>
           <div className="DPside_media_container">

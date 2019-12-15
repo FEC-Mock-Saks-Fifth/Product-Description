@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios'
+import Fullscreen from "react-full-screen"
 import Details from './components/Details.jsx'
 import Images from './components/Images.jsx'
 import AddtoBag from './components/AddtoBag.jsx'
@@ -17,11 +18,18 @@ class App extends React.Component {
       sizefit: '',
       addtobag: false,
       sizeselected: '',
-      quantityselected: ''
+      quantityselected: '',
+      isFull: false,
+      fullSize: ''
 
     }
-    this.getProduct = this.getProduct.bind(this)
-    this.addToBagToggle=this.addToBagToggle.bind(this)
+    this.getProduct = this.getProduct.bind(this);
+    this.addToBagToggle=this.addToBagToggle.bind(this);
+    this.goFull=this.goFull.bind(this);
+  }
+
+  componentDidMount() {
+    this.getProduct()
   }
 
   getProduct() {
@@ -45,15 +53,16 @@ class App extends React.Component {
       })
   }
 
-  componentDidMount() {
-    this.getProduct()
+  goFull (pic) {
+    this.setState({isFull: true, fullSize: pic});
   }
 
   render() {
     return(
       <div>
+        <Fullscreen enabled={this.state.isFull} onChange={isFull => this.setState({isFull})}>{this.state.isFull ? <img style={{display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"}} src={this.state.fullSize} /> : null}</Fullscreen>
         <Details addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} bullet={this.state.bullet} current={this.state.current} style={this.state.style} sizefit={this.state.sizefit}/>
-        <Images images={this.state.images} addtobag={this.state.addtobag}/>
+        <Images goFull={this.goFull} images={this.state.images} addtobag={this.state.addtobag}/>
         <AddtoBag addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} images={this.state.images[1]} current={this.state.current} size={this.state.sizeselected} quantity={this.state.quantityselected}/>
       </div>
     )
