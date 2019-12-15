@@ -1,11 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path = require('path');
 const dbHelper = require('../db/dbhelpers.js');
 
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("/Users/derickpark/Product-Description/client/dist"));
+app.use(express.static(path.resolve(__dirname, '../client/dist')));
 
 app.get('/derick_product_details', (req, res) => {
   dbHelper((err, result) => {

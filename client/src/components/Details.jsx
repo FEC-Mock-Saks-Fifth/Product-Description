@@ -56,11 +56,10 @@ class Details extends React.Component {
                 {this.state.sizetoggle !== null ? (
                   <div className="DPproduct_shipping_margin">
                     <p className="DPgothamPro DPproduct_preorder_font">Pre-Order</p>
-                    <p className="DPgothamPro DPproduct_shipping_font">Expected ship date no later than: {`${new Date().getUTCMonth()+4}/${new Date().getUTCDate()}/${new Date().getUTCFullYear()}`}</p>
-                  </div>) : null }<br></br>
+                    <p className="DPgothamPro DPproduct_shipping_font">Expected ship date no later than: {`${new Date().getUTCMonth()+4}/${new Date().getUTCDate()}/${new Date().getUTCFullYear()}`}<br></br><br></br><br></br></p>
+                  </div>) : null }
 
               <div className="DPhelvetica DPproduct_price_font">${this.props.current.price}.00</div>
-  
             <div className="DPproduct_earn_container">
               <span className="DPgothamNarrow DPsaks_earn">Earn at least <span className="DPproduct_earn_color">{this.props.current.price * 2}</span> points with the SaksFirst Card</span>
             </div>
