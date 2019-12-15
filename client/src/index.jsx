@@ -63,7 +63,7 @@ class App extends React.Component {
         <Fullscreen enabled={this.state.isFull} onChange={isFull => this.setState({isFull})}>{this.state.isFull ? <img style={{display: "block", marginLeft: "auto", marginRight: "auto", width: "50%"}} src={this.state.fullSize} /> : null}</Fullscreen>
         <Details addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} bullet={this.state.bullet} current={this.state.current} style={this.state.style} sizefit={this.state.sizefit}/>
         <Images goFull={this.goFull} images={this.state.images} addtobag={this.state.addtobag}/>
-        <AddtoBag addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} images={this.state.images[1]} current={this.state.current} size={this.state.sizeselected} quantity={this.state.quantityselected}/>
+        <AddtoBag addToBagToggle={this.addToBagToggle} addtobag={this.state.addtobag} images={this.state.images[1] || this.state.images[0]} current={this.state.current} size={this.state.sizeselected} quantity={this.state.quantityselected}/>
       </div>
     )
   }
